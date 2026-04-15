@@ -14,12 +14,10 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0a0a0a;
       color: #e0e0e0;
       line-height: 1.6;
     }
 
-    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -27,21 +25,11 @@
       justify-content: center;
       position: relative;
       overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
       background: url('assets/tubes-background.gif') no-repeat center center;
       background-size: cover;
-      opacity: 0.15;
-      z-index: 0;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 1;
       text-align: center;
       padding: 2rem;
       max-width: 700px;
@@ -53,20 +41,23 @@
       letter-spacing: -0.03em;
       margin-bottom: 0.3rem;
       color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
 
     .tagline {
       font-size: 1.3rem;
-      color: #999;
+      color: #ddd;
       margin-bottom: 1rem;
       font-weight: 300;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
 
     .bio {
       font-size: 1.05rem;
-      color: #aaa;
+      color: #ccc;
       margin-bottom: 2rem;
       line-height: 1.7;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
 
     .links {
@@ -74,17 +65,17 @@
       gap: 1.5rem;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 2rem;
     }
 
     .links a {
-      color: #888;
+      color: #ccc;
       text-decoration: none;
       font-size: 0.95rem;
       transition: color 0.2s;
       display: flex;
       align-items: center;
       gap: 0.4rem;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
 
     .links a:hover { color: #fff; }
@@ -94,98 +85,10 @@
       height: 18px;
       fill: currentColor;
     }
-
-    .scroll-hint {
-      margin-top: 2rem;
-      color: #555;
-      font-size: 0.85rem;
-      animation: bounce 2s infinite;
-    }
-
-    .scroll-hint a {
-      color: #555;
-      text-decoration: none;
-    }
-
-    .scroll-hint a:hover { color: #888; }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(6px); }
-    }
-
-    /* Publications */
-    .section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-
-    h2 + .subtitle {
-      color: #666;
-      margin-bottom: 2.5rem;
-      font-size: 0.95rem;
-    }
-
-    .pub {
-      border-left: 2px solid #222;
-      padding: 0 0 0 1.2rem;
-      margin-bottom: 1.8rem;
-      transition: border-color 0.2s;
-    }
-
-    .pub:hover { border-color: #555; }
-
-    .pub h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #ddd;
-      margin-bottom: 0.3rem;
-    }
-
-    .pub h3 a {
-      color: #ddd;
-      text-decoration: none;
-    }
-
-    .pub h3 a:hover { color: #fff; text-decoration: underline; }
-
-    .pub .authors {
-      font-size: 0.9rem;
-      color: #888;
-      margin-bottom: 0.2rem;
-    }
-
-    .pub .authors strong { color: #bbb; }
-
-    .pub .venue {
-      font-size: 0.85rem;
-      color: #666;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 3rem 2rem;
-      color: #444;
-      font-size: 0.85rem;
-      border-top: 1px solid #151515;
-    }
-
-    footer a { color: #666; text-decoration: none; }
-    footer a:hover { color: #aaa; }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
   <div class="hero">
     <div class="hero-content">
       <h1>Samuel Croset</h1>
@@ -205,114 +108,11 @@
         </a>
         <a href="https://scholar.google.com/scholar?q=author:samuel+croset">
           <svg viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg>
-          Scholar
+          Google Scholar
         </a>
       </div>
-      <div class="scroll-hint">
-        <a href="#publications">↓ Publications</a>
-      </div>
     </div>
   </div>
-
-  <!-- Publications -->
-  <div class="section" id="publications">
-    <h2>Publications</h2>
-    <p class="subtitle">Selected research work, reverse chronological order</p>
-
-    <div class="pub">
-      <h3><a href="https://www.aesnet.org/meetings_events/annual_meeting_abstracts/view/2422693">Healthcare Resource Utilization Among Patients With Focal Seizure Initiating Eslicarbazepine Acetate</a></h3>
-      <p class="authors">G Rhys Williams, Houston Warren, <strong>Samuel Croset</strong>, Rajat Chandra, Brian Wensel, Darshan Mehta</p>
-      <p class="venue">Dec. 2020 — American Epilepsy Society, Annual Meeting</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://bioinformatics.oxfordjournals.org/content/32/6/918.long">Flexible data integration and curation using a graph-based approach</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong>, Joachim Rupp, Martin Romacker</p>
-      <p class="venue">Nov. 2015 — Bioinformatics</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="https://www.repository.cam.ac.uk/handle/1810/246260">Drug repositioning and indication discovery using description logics</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong></p>
-      <p class="venue">Oct. 2014 — University of Cambridge (PhD Thesis)</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://jcheminf.springeropen.com/articles/10.1186/s13321-014-0040-8">A document classifier for medicinal chemistry publications trained on the ChEMBL corpus</a></h3>
-      <p class="authors">George Papadatos, Gerard JP van Westen, <strong>Samuel Croset</strong>, Rita Santos, Simone Trubian, John P Overington</p>
-      <p class="venue">Aug. 2014 — Journal of Cheminformatics</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://ceur-ws.org/Vol-1114/Session3_Herrero-Zazo.pdf">An ontology for drug-drug interactions</a></h3>
-      <p class="authors">Maria Herrero-Zazo, Janna Hastings, Isabel Segura-Bedmar, <strong>Samuel Croset</strong>, Paloma Martinez, Christoph Steinbeck</p>
-      <p class="venue">Oct. 2013 — Workshop on Semantic Web Applications and Tools for Life Sciences</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://www.sciencedirect.com/science/article/pii/S1359644613003917">Semantic integration of gene–disease associations for type 2 diabetes mellitus</a></h3>
-      <p class="authors">Dietrich Rebholz-Schuhmann, Christoph Grabmüller, Silvestras Kavaliauskas, <strong>Samuel Croset</strong>, Peter Woollard, Rolf Backofen, Wendy Filsell, Dominic Clark</p>
-      <p class="venue">Nov. 2013 — Drug Discovery Today</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://bioinformatics.oxfordjournals.org/content/30/6/876.long">The functional therapeutic chemical classification system</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong>, John P Overington, Dietrich Rebholz-Schuhmann</p>
-      <p class="venue">Oct. 2013 — Bioinformatics</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://ceur-ws.org/Vol-1080/owled2013_9.pdf">Brain, a library for the OWL2 EL profile</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong>, John P Overington, Dietrich Rebholz-Schuhmann</p>
-      <p class="venue">Jun. 2013 — OWL Experiences and Directions Workshop</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://bioinformatics.oxfordjournals.org/content/29/9/1238.full">Brain: biomedical knowledge manipulation</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong>, John P Overington, Dietrich Rebholz-Schuhmann</p>
-      <p class="venue">May 2013 — Bioinformatics</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://www.onto-med.de/obml/ws2012/obml2012report.pdf#page=23">Integration of the ATC Classification System and DrugBank using OWL and text-mining</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong>, Robert Hoehndorf, Dietrich Rebholz-Schuhmann</p>
-      <p class="venue">Sep. 2012 — Workshop on Ontologies in Biomedicine and Life Sciences</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://newdesign.aclweb.org/anthology/W/W12/W12-2421.pdf">Finding small molecule and protein pairs in scientific literature using a bootstrapping method</a></h3>
-      <p class="authors">Ying Yan, Jee-Hyub Kim, <strong>Samuel Croset</strong>, Dietrich Rebholz-Schuhmann</p>
-      <p class="venue">Jun. 2012 — Workshop on Biomedical Natural Language Processing</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://ceur-ws.org/Vol-897/ecs_2.pdf">OWL Representation of Drug Activities on Biological Systems</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong></p>
-      <p class="venue">Jun. 2012 — International Conference on Biomedical Ontologies</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://wyner.info/research/Papers/2012/ArgBioITBAM2012.pdf">Argumentation to Represent and Reason over Biological Systems</a></h3>
-      <p class="authors">Adam Wyner, Luke Riley, Robert Hoehndorf, <strong>Samuel Croset</strong></p>
-      <p class="venue">Jan. 2012 — Information Technology in Bio- and Medical Informatics</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://ceur-ws.org/Vol-721/paper-02.pdf">Exploring the Generation and Integration of Publishable Scientific Facts Using Nano-publications</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong>, Amanda Clare, Christoph Grabmueller, Senay Kafkas, Maria Liakata, Anika Oellrich, Dietrich Rebholz-Schuhmann</p>
-      <p class="venue">May 2011 — 1st Workshop on Semantic Publishing</p>
-    </div>
-
-    <div class="pub">
-      <h3><a href="http://ceur-ws.org/Vol-698/paper6.pdf">The CALBC RDF Triple store: retrieval over large literature content</a></h3>
-      <p class="authors"><strong>Samuel Croset</strong>, Christoph Grabmueller, Chen Li, Silverstras Kavialauskas, Dietrich Rebholz-Schuhmann</p>
-      <p class="venue">Dec. 2010 — Workshop on Semantic Web Applications and Tools for Life Sciences</p>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Samuel Croset · <a href="mailto:samuel@croset.dev">samuel@croset.dev</a></p>
-  </footer>
 
 </body>
 </html>
